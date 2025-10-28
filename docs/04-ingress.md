@@ -324,6 +324,21 @@ kubectl rollout status deployment/ingress-nginx-controller -n ingress-nginx
 curl -H "Host: gameapp.local" -I http://localhost:8080/
 ```
 
+### Symptom: Can't open gameapp.local:8080 through the browser
+**Cause:** cluster’s ingress (LoadBalancer / NodePort) listens on the WSL network (if using WSL Linux), not the Windows host network.
+**Fix:**
+```bash
+
+# edit your Windows hosts file
+C:\Windows\System32\drivers\etc\hosts
+
+# add
+127.0.0.1 gameapp.local
+```
+
+
+
+
 ### Symptom: SSL certificate errors in ingress controller logs
 **Cause:** Ingress configured with SSL but certificates don't exist
 **Command to confirm:** `kubectl logs -n ingress-nginx -l app.kubernetes.io/component=controller | grep "SSL"`
