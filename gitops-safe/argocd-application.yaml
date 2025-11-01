@@ -10,7 +10,7 @@ spec:
   
   # Source - your Git repository
   source:
-    repoURL: https://github.com/dirgayeah23/DevOps-Home-Lab-2025
+    repoURL: https://github.com/dirgayeah23/DevOps-Home-Lab-2025.git
     targetRevision: main  # Use main branch
     path: gitops-safe/overlays/dev  # Path to your GitOps configs
   
