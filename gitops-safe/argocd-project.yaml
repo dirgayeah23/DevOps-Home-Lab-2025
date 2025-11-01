@@ -8,7 +8,7 @@ spec:
   
   # Source repositories - only allow your specific repo
   sourceRepos:
-  - 'https://github.com/Osomudeya/DevOps-Home-Lab-2025.git'
+  - 'https://github.com/dirgayeah23/DevOps-Home-Lab-2025'
   
   # Destination clusters and namespaces
   destinations:
